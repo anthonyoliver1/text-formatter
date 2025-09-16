@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0f172a"> <!-- Android/Chrome -->
+    <link rel="manifest" href="manifest.json">
+
+    <title>Text formatter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">
+            <header>
+                <h1>Formatador de texto para os app CUNC e Nova Canação</h1>
+                <p>Escreva ou cole nos campos e clique em "Copiar" para ter o texto no formato correto dos Apps.</p>
+            </header>
+
+            <section class="workspace">
+                <!-- Coluna esquerda: textarea -->
+
+                <div class="item">
+                    <div class="left-card">
+                        <label for="texto">Seu texto</label>
+                        <textarea id="texto" placeholder="Digite aqui...&#10;(Exemplo: Linha1\nLinha2, Tab\tTab)"
+                            autocapitalize="sentences" spellcheck="true"></textarea>
+                        <div class="actions">
+                            <button id="copiar" class="btn" type="button" aria-label="Copiar conteúdo do textarea"
+                                disabled>Copiar com a sequência de escape</button>
+                            <span class="hint" id="lenHint">0 caracteres</span>
+                        </div>
+                    </div>
+
+                    <!-- Coluna direita propositalmente vazia para manter o textarea do lado esquerdo -->
+                    <div class="right-card" id="preview-content1">
+                        <h3>Texto (visualização em tempo real)</h3>
+                        <pre id="preview1"></pre>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left-card">
+                        <label for="texto">Seu texto com a sequência de escape</label>
+                        <textarea id="text-with-escape-sequence"
+                            placeholder="Cole aqui o texto com a sequência de escape" autocapitalize="sentences"
+                            spellcheck="true"></textarea>
+                        <div class="actions">
+                            <button id="copy-without-scape-sequence" class="btn" type="button"
+                                aria-label="Copiar conteúdo do textarea" disabled>Copiar</button>
+                            <span class="hint" id="lenHintWithoutScapeSequence">0 caracteres</span>
+                        </div>
+                    </div>
+
+                    <!-- Coluna direita propositalmente vazia para manter o textarea do lado esquerdo -->
+                    <div class="right-card" id="preview-content">
+                        <h3>Texto (visualização em tempo real)</h3>
+                        <pre id="preview"></pre>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Copiado para a área de transferência.</div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

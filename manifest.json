@@ -1,0 +1,12 @@
+{
+  "name": "Text formatter",
+  "short_name": "PWA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    { "src": "assets/icons/waveform-256.png", "sizes": "256x256", "type": "image/png" },
+    { "src": "assets/icons/waveform-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
