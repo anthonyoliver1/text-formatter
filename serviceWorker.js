@@ -1,4 +1,4 @@
-const CACHE_NAME = 'meu-pwa-cache-v1';
+const CACHE_NAME = 'text-formatter-cache-v1';
 const urlsToCache = [
     '/',
     '/index.html',
