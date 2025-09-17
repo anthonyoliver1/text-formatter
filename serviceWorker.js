@@ -1,10 +1,15 @@
 const CACHE_NAME = 'text-formatter-cache-v1';
+
+const BASE_PATH = location.pathname.startsWith('/text-formatter')
+    ? '/text-formatter/'
+    : '/';
+
 const urlsToCache = [
-    './',
-    './index.html',
-    './css/reset.css',
-    './css/style.css',
-    './js/main.js'
+    `${BASE_PATH}`,
+    `${BASE_PATH}index.html`,
+    `${BASE_PATH}css/reset.css`,
+    `${BASE_PATH}css/style.css`,
+    `${BASE_PATH}js/main.js`
 ];
 
 self.addEventListener('install', event => {
