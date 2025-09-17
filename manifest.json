@@ -1,7 +1,7 @@
 {
   "name": "Text formatter",
   "short_name": "Text formatter",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
