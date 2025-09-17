@@ -1,10 +1,10 @@
 const CACHE_NAME = 'text-formatter-cache-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/css/reset.css',
-    '/css/style.css',
-    '/js/main.js'
+    './',
+    './index.html',
+    './css/reset.css',
+    './css/style.css',
+    './js/main.js'
 ];
 
 self.addEventListener('install', event => {
